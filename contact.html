@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandBox Studio | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo-link">
+                <div class="logo-section">
+                    <img src="nfjvbn\fb logo.jpg" alt="SandBox Studio Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="site-name">SandBox Studio</span>
+                        <span class="slogan">Communicate. Collaborate. Create.</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="pricing-plans.html">Pricing Plans</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="login.html" class="login-icon" title="Log In">
+                        <!-- SVG icon -->
+                        <svg width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 20c0-4 8-4 8-4s8 0 8 4"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <!-- Replace the button content with your image -->
+            <button class="hamburger" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <section class="contact-section">
+      <div class="contact-container">
+        <div class="contact-illustration">
+          <img src="nfjvbn/Call center.gif" alt="Contact Us Illustration">
+        </div>
+        <div class="contact-header">
+          <h2>Let's Build Together</h2>
+          <p>Have a project in mind or a question for us? Fill out the form below.</p>
+        </div>
+        <form class="contact-form" autocomplete="off">
+          <input type="text" name="fullName" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <textarea name="message" rows="5" placeholder="Project Details / Message" required></textarea>
+          <select name="budget">
+            <option value="">Preferred Budget Range (optional)</option>
+            <option value="0-500">£0–£500</option>
+            <option value="500-1000">£500–£1000</option>
+            <option value="1000+">£1000+</option>
+          </select>
+          <input type="file" name="attachment" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg">
+          <button type="submit">Request Quote</button>
+          <p class="privacy-note">
+            We respect your privacy. Your information will only be used to provide you with a quote and will not be shared with third parties.
+          </p>
+        </form>
+      </div>
+    </section>
+    <!-- Your content goes here -->
+    <script src="Js.js"></script>
+</body>
+</html>

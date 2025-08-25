@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SandBox Studio | Pricing Plans</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Change font to Michroma -->
+    <link href="https://fonts.googleapis.com/css?family=Michroma&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo-link">
+                <div class="logo-section">
+                    <img src="nfjvbn\fb logo.jpg" alt="SandBox Studio Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="site-name">SandBox Studio</span>
+                        <span class="slogan">Communicate. Collaborate. Create.</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="pricing-plans.html">Pricing Plans</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="login.html" class="login-icon" title="Log In">
+                        <!-- SVG icon -->
+                        <svg width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 20c0-4 8-4 8-4s8 0 8 4"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <button class="hamburger" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <h2>Our Pricing Plans</h2>
+        <p>Choose the plan that fits your business. Simple, transparent pricing with no hidden fees.</p>
+        <!-- Currency Toggle -->
+        <div class="currency-toggle">
+            <span class="toggle-label">Currency:</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="currencyToggle" aria-label="Toggle currency">
+                <span class="toggle-slider"></span>
+                <span class="currency-symbols">
+                    <span class="gbp">£</span>
+                    <span class="lyd">LYD</span>
+                </span>
+            </label>
+        </div>
+        <!-- Pricing Table -->
+        <div class="pricing-table">
+            <!-- Starter Plan -->
+            <div class="pricing-card" data-plan="starter">
+                <div class="plan-title">Starter</div>
+                <div class="plan-price" data-gbp="£399" data-lyd="900 LYD">£399</div>
+                <div class="plan-desc">Perfect for individuals and small startups launching their first site.</div>
+                <ul class="plan-features">
+                    <li><span class="check">✔</span>Custom 5-page website</li>
+                    <li><span class="check">✔</span>Mobile responsive design</li>
+                    <li><span class="check">✔</span>Basic SEO setup</li>
+                    <li><span class="check">✔</span>Contact form integration</li>
+                </ul>
+                <a href="#" class="get-started-btn">Get Started</a>
+            </div>
+            <!-- Business Plan (Best Value) -->
+            <div class="pricing-card best-value" data-plan="business">
+                <div class="best-value-badge">Best Value</div>
+                <div class="plan-title">Business</div>
+                <div class="plan-price" data-gbp="£799" data-lyd="1,800 LYD">£799</div>
+                <div class="plan-desc">For growing businesses that need more features and flexibility.</div>
+                <ul class="plan-features">
+                    <li><span class="check">✔</span>Up to 15 custom pages</li>
+                    <li><span class="check">✔</span>Blog &amp; news system</li>
+                    <li><span class="check">✔</span>Advanced SEO tools</li>
+                    <li><span class="check">✔</span>Analytics integration</li>
+                    <li><span class="check">✔</span>Priority support</li>
+                </ul>
+                <a href="#" class="get-started-btn">Get Started</a>
+            </div>
+            <!-- E-Commerce Plan -->
+            <div class="pricing-card" data-plan="ecommerce">
+                <div class="plan-title">E-Commerce</div>
+                <div class="plan-price" data-gbp="£1,299" data-lyd="3,000 LYD">£1,299</div>
+                <div class="plan-desc">Full-featured online store with secure payments and product management.</div>
+                <ul class="plan-features">
+                    <li><span class="check">✔</span>Unlimited product listings</li>
+                    <li><span class="check">✔</span>Payment gateway integration</li>
+                    <li><span class="check">✔</span>Inventory management</li>
+                    <li><span class="check">✔</span>Order tracking system</li>
+                    <li><span class="check">✔</span>1 year premium support</li>
+                </ul>
+                <a href="#" class="get-started-btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+    <!-- Quote Request Section -->
+<section class="quote-section" id="quote-request">
+  <div class="quote-container">
+    <h2>Need a Custom Quote?</h2>
+    <p class="quote-desc">
+      If you need a quote for all of our services or just some of them, please fill out the form below and our team will get back to you as soon as possible.
+    </p>
+    <form class="quote-form" id="quoteForm" novalidate>
+      <div class="form-grid">
+        <!-- Left Column -->
+        <div class="form-col">
+          <div class="form-group">
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" name="fullName" required autocomplete="name" />
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label>Services Required <span class="required">*</span></label>
+            <div class="checkbox-list">
+              <label><input type="checkbox" name="services" value="Website Design & Development" /> Website Design & Development</label>
+              <label><input type="checkbox" name="services" value="Web Hosting" /> Web Hosting</label>
+              <label><input type="checkbox" name="services" value="SEO & Marketing" /> SEO & Marketing</label>
+              <label><input type="checkbox" name="services" value="E-Commerce Setup" /> E-Commerce Setup</label>
+              <label><input type="checkbox" name="services" value="Website Maintenance" /> Website Maintenance</label>
+              <label><input type="checkbox" name="services" value="Branding & Design" /> Branding & Design</label>
+              <label>
+                <input type="checkbox" name="services" value="Other" id="otherServiceCheckbox" /> Other
+              </label>
+              <input type="text" id="otherServiceInput" name="otherService" placeholder="Please specify..." style="display:none; margin-top:8px;" />
+            </div>
+            <span class="error-message"></span>
+          </div>
+        </div>
+        <!-- Right Column -->
+        <div class="form-col">
+          <div class="form-group">
+            <label for="details">Project Details / Message <span class="required">*</span></label>
+            <textarea id="details" name="details" rows="6" required></textarea>
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="budget">Preferred Budget Range</label>
+            <select id="budget" name="budget">
+              <option value="">Select a range (optional)</option>
+              <option value="0-500">£0–£500</option>
+              <option value="500-1000">£500–£1000</option>
+              <option value="1000+">£1000+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="attachment">Attach a file (optional)</label>
+            <input type="file" id="attachment" name="attachment" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" />
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="quote-submit-btn">Request Quote</button>
+      <p class="privacy-disclaimer">
+        We respect your privacy. Your information will only be used to provide you with a quote and will not be shared with third parties.
+      </p>
+    </form>
+  </div>
+</section>
+    <footer>
+  <div class="footer-main">
+    <!-- Brand Column -->
+    <div class="footer-col brand-info">
+      <img src="nfjvbn\fb logo.jpg" alt="SandBox Studio Logo" class="footer-logo" />
+      <p class="footer-tagline">Communicate. Collaborate. Create.</p>
+    </div>
+    <!-- Contact Column -->
+    <div class="footer-col contact-info">
+      <h5>Contact</h5>
+      <div class="contact-details">
+        <div>
+          <p>Address:</p>
+          <p>Manchester<br>M1, UK</p>
+        </div>
+        <div>
+          <p>Phone:</p>
+          <p>+44 7361 542988</p>
+        </div>
+        <div>
+          <p>Email:</p>
+          <p>media@sandboxstudio.uk</p>
+        </div>
+      </div>
+    </div>
+    <!-- Quick Links Column -->
+    <div class="footer-col quick-links">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <!-- Newsletter Column -->
+    <div class="footer-col newsletter">
+      <h5>Follow</h5>
+      <p>Sign up to get the latest news from our studio.</p>
+      <form>
+        <input type="email" placeholder="Your email address" required />
+        <div class="newsletter-checkbox">
+          <input type="checkbox" id="newsletter-consent" required />
+          <label for="newsletter-consent">I agree to receive emails from SandBox Studio</label>
+        </div>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <!-- Social Column -->
+    <div class="footer-col social-links">
+      <h5>Social</h5>
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="https://www.facebook.com/share/1ZcemboELB/">FaceBook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 SandBox Studio. All Rights Reserved.</p>
+  </div>
+</footer>
+    <script src="pricing.js"></script>
+    <script src="Js.js"></script>
+</body>
+</html>

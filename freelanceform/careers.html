@@ -1,0 +1,229 @@
+<!--
+careers.html
+Purpose: Careers page for Sandbox Studio team applications.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Careers at Sandbox Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="careers.css">
+    <!-- TODO: Add favicon and additional meta tags if needed -->
+</head>
+<body>
+    <header>
+        <h1>Join the Sandbox Studio Freelance Team</h1>
+        <p>We're always looking for talented, passionate people to join our creative and collaborative team. If you want to work on exciting projects and grow your skills, apply below!</p>
+    </header>
+    <div class="lang-toggle-container">
+        <button id="switch-arabic" class="lang-toggle-btn">العربية</button>
+    </div>
+    <main>
+    <form id="careers-application" action="application-submit.php" method="POST" enctype="multipart/form-data" novalidate>
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. +1 555 123 4567" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Desired Role/Position</label>
+                <select id="role" name="role" required>
+                    <option value="">Select a role</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Designer">Designer</option>
+                    <option value="Project Manager">Project Manager</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="portfolio">Portfolio/LinkedIn/GitHub Link <span class="optional">(optional)</span></label>
+                <input type="url" id="portfolio" name="portfolio" placeholder="https://yourportfolio.com">
+            </div>
+            <div class="form-group">
+                <label for="why">Why do you want to join Sandbox Studio?</label>
+                <textarea id="why" name="why" placeholder="Tell us why you want to join..." required minlength="150"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skills">What unique skills or experiences can you bring to our team?</label>
+                <textarea id="skills" name="skills" placeholder="Describe your unique skills or experiences..." required minlength="150"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="teamwork">How do you handle teamwork and collaboration?</label>
+                <textarea id="teamwork" name="teamwork" placeholder="Share your approach to teamwork and collaboration..." required minlength="150"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="cv">Upload your CV/Resume</label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.docx" required>
+            </div>
+            <div class="form-group">
+                <label for="video">Upload a video introduction <span class="optional">(optional, MP4/MOV, max 500MB)</span></label>
+                <input type="file" id="video" name="video" accept="video/mp4,video/quicktime">
+            </div>
+            <button type="submit" class="submit-btn">Submit Application</button>
+            <p class="note">Your application will be reviewed by our team. We will contact you via email if shortlisted.</p>
+        </form>
+    </main>
+    <footer>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </nav>
+        <p>&copy; 2025 Sandbox Studio. All rights reserved.</p>
+        </footer>
+        <style>
+        .lang-toggle-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1.2rem 2rem 0 2rem;
+        }
+        .lang-toggle-btn {
+            background: linear-gradient(90deg, #2a7ae2 0%, #6dd5ed 100%);
+            color: #fff;
+            border: none;
+            border-radius: 24px;
+            padding: 0.5em 1.7em;
+            font-size: 1.08em;
+            font-family: 'Michroma', 'PT Sans', Arial, sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            box-shadow: 0 2px 12px rgba(42,122,226,0.10);
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+            outline: none;
+            margin-bottom: 0.2em;
+        }
+        .lang-toggle-btn:hover, .lang-toggle-btn:focus {
+            background: linear-gradient(90deg, #1a5bb8 0%, #2a7ae2 100%);
+            box-shadow: 0 4px 18px rgba(42,122,226,0.18);
+            transform: translateY(-2px) scale(1.04);
+        }
+        </style>
+        <script>
+        // Simple toggle for English/Arabic translation (static text only)
+        const translations = {
+            ar: {
+                title: 'انضم إلى فريق ساندبوكس ستوديو',
+                intro: 'نبحث دائمًا عن أشخاص موهوبين وشغوفين للانضمام إلى فريقنا الإبداعي والمتعاون. إذا كنت ترغب في العمل على مشاريع مثيرة وتطوير مهاراتك، قدم الآن!',
+                fullname: 'الاسم الكامل',
+                fullname_ph: 'اسمك الكامل',
+                email: 'البريد الإلكتروني',
+                email_ph: 'you@email.com',
+                phone: 'رقم الهاتف',
+                phone_ph: 'مثال: +966 555 123 456',
+                role: 'الدور/الوظيفة المطلوبة',
+                select_role: 'اختر الدور',
+                developer: 'مطور',
+                designer: 'مصمم',
+                pm: 'مدير مشروع',
+                marketing: 'تسويق',
+                other: 'أخرى',
+                portfolio: 'رابط معرض الأعمال/لينكدإن/جيت هب',
+                portfolio_ph: 'https://yourportfolio.com',
+                why: 'لماذا ترغب في الانضمام إلى ساندبوكس ستوديو؟',
+                why_ph: 'حدثنا عن سبب رغبتك في الانضمام...',
+                skills: 'ما المهارات أو الخبرات الفريدة التي ستضيفها للفريق؟',
+                skills_ph: 'صف مهاراتك أو خبراتك الفريدة...',
+                teamwork: 'كيف تتعامل مع العمل الجماعي والتعاون؟',
+                teamwork_ph: 'شاركنا أسلوبك في العمل الجماعي...',
+                cv: 'ارفع سيرتك الذاتية',
+                video: 'ارفع فيديو تعريفي (اختياري، MP4/MOV، 500MB كحد أقصى)',
+                submit: 'إرسال الطلب',
+                note: 'سيتم مراجعة طلبك من قبل فريق التوظيف لدينا. سنتواصل معك عبر البريد الإلكتروني إذا تم اختيارك.',
+                nav_home: 'الرئيسية',
+                nav_contact: 'اتصل بنا',
+                nav_privacy: 'سياسة الخصوصية',
+                copyright: 'جميع الحقوق محفوظة © 2025 ساندبوكس ستوديو.'
+            },
+            en: {
+                title: 'Join the Sandbox Studio Freelance Team',
+                intro: "We're always looking for talented, passionate people to join our creative and collaborative team. If you want to work on exciting projects and grow your skills, apply below!",
+                fullname: 'Full Name',
+                fullname_ph: 'Your full name',
+                email: 'Email Address',
+                email_ph: 'you@email.com',
+                phone: 'Phone Number',
+                phone_ph: 'e.g. +1 555 123 4567',
+                role: 'Desired Role/Position',
+                select_role: 'Select a role',
+                developer: 'Developer',
+                designer: 'Designer',
+                pm: 'Project Manager',
+                marketing: 'Marketing',
+                other: 'Other',
+                portfolio: 'Portfolio/LinkedIn/GitHub Link (optional)',
+                portfolio_ph: 'https://yourportfolio.com',
+                why: 'Why do you want to join Sandbox Studio?',
+                why_ph: 'Tell us why you want to join...',
+                skills: 'What unique skills or experiences can you bring to our team?',
+                skills_ph: 'Describe your unique skills or experiences...',
+                teamwork: 'How do you handle teamwork and collaboration?',
+                teamwork_ph: 'Share your approach to teamwork and collaboration...',
+                cv: 'Upload your CV/Resume',
+                video: 'Upload a video introduction (optional, MP4/MOV, max 500MB)',
+                submit: 'Submit Application',
+                note: 'Your application will be reviewed by our hiring team. We will contact you via email if shortlisted.',
+                nav_home: 'Home',
+                nav_contact: 'Contact',
+                nav_privacy: 'Privacy Policy',
+                copyright: '© 2025 Sandbox Studio. All rights reserved.'
+            }
+        };
+        let currentLang = 'en';
+        document.getElementById('switch-arabic').onclick = function() {
+            currentLang = (currentLang === 'en') ? 'ar' : 'en';
+            translatePage(currentLang);
+            this.textContent = (currentLang === 'en') ? 'العربية' : 'English';
+            document.body.dir = (currentLang === 'ar') ? 'rtl' : 'ltr';
+        };
+        function translatePage(lang) {
+            const t = translations[lang];
+            document.querySelector('header h1').textContent = t.title;
+            document.querySelector('header p').textContent = t.intro;
+            document.querySelector('label[for="fullname"]').textContent = t.fullname;
+            document.getElementById('fullname').placeholder = t.fullname_ph;
+            document.querySelector('label[for="email"]').textContent = t.email;
+            document.getElementById('email').placeholder = t.email_ph;
+            document.querySelector('label[for="phone"]').textContent = t.phone;
+            document.getElementById('phone').placeholder = t.phone_ph;
+            document.querySelector('label[for="role"]').textContent = t.role;
+            document.getElementById('role').options[0].textContent = t.select_role;
+            document.getElementById('role').options[1].textContent = t.developer;
+            document.getElementById('role').options[2].textContent = t.designer;
+            document.getElementById('role').options[3].textContent = t.pm;
+            document.getElementById('role').options[4].textContent = t.marketing;
+            document.getElementById('role').options[5].textContent = t.other;
+            document.querySelector('label[for="portfolio"]').innerHTML = t.portfolio;
+            document.getElementById('portfolio').placeholder = t.portfolio_ph;
+            document.querySelector('label[for="why"]').textContent = t.why;
+            document.getElementById('why').placeholder = t.why_ph;
+            document.querySelector('label[for="skills"]').textContent = t.skills;
+            document.getElementById('skills').placeholder = t.skills_ph;
+            document.querySelector('label[for="teamwork"]').textContent = t.teamwork;
+            document.getElementById('teamwork').placeholder = t.teamwork_ph;
+            document.querySelector('label[for="cv"]').textContent = t.cv;
+            document.querySelector('label[for="video"]').textContent = t.video;
+            document.querySelector('.submit-btn').textContent = t.submit;
+            document.querySelector('.note').textContent = t.note;
+            // Footer nav
+            const navLinks = document.querySelectorAll('footer nav a');
+            navLinks[0].textContent = t.nav_home;
+            navLinks[1].textContent = t.nav_contact;
+            navLinks[2].textContent = t.nav_privacy;
+            document.querySelector('footer p').textContent = t.copyright;
+        }
+        </script>
+</body>
+</html>
